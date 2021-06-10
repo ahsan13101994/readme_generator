@@ -14,6 +14,9 @@ function renderLicenseSection(license) {}
 function generateMarkdown(userResponses) {
 
   return draftMarkdown=`
+
+  ${userResponses.title}
+
   Table of Contents Section
 
   ## Table of Contents
@@ -21,9 +24,12 @@ function generateMarkdown(userResponses) {
   ${userResponses.usage?'* [Usage](#usage)':''}
   ${userResponses.contributing?'* [Contributing](#contributing)':''}
   ${userResponses.testing?'* [Tests](#testing)':''}
-
+  
+  ## Description 
+  
+  ${userResponses.description}
   `
-  // // Table of Contents Section
+// // Table of Contents Section
   // let generateTableofContent = `## Table of Contents`;
 
   // if (userResponses.installation !== '') { generateTableofContent += `
@@ -37,17 +43,6 @@ function generateMarkdown(userResponses) {
 
   // if (userResponses.tests !== '') { generateTableofContent += `
   // * [Tests](#testing)` };
-
-
-  // // Title
-  // let markdownGenerator = 
-  // `# ${userResponses.title}
-  
-  // ## Description 
-  
-  // ${userResponses.description}
-  // `
-
   // // Add Table of Contents to markdown
   // markdownGenerator += generateTableofContent;
  
