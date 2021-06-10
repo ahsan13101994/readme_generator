@@ -19,6 +19,18 @@ const questions = [
     },
     {
         type: 'input',
+        message: "What is your email address?",
+        name: 'email',
+        default: 'example@dev.com',
+        validate: function (answer) {
+            if (answer.length < 1) {
+                return console.log("Valid Email is required.");
+            }
+            return true;
+        }
+    },
+    {
+        type: 'input',
         message: "What is your project's name?",
         name: 'title',
         default: 'readme-generator',
