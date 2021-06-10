@@ -9,6 +9,7 @@
   "author": "Syed Ahsan Rizvi",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.21.1",
     "inquirer": "^6.3.1"
   }
 }
