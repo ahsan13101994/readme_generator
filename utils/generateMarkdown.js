@@ -34,105 +34,55 @@ function generateMarkdown(userResponses) {
   *Steps required to install the project and step-by-step guide of how to get the development environment running:*
   
   ${userResponses.installation}
-  
-  
-  `
 
-  // // Add Table of Contents to markdown
-  // markdownGenerator += generateTableofContent;
+  ## Usage 
+  
+  *Instructions and examples for use:*
+  
+  ${userResponses.usage}
+
+  ## Contributing
  
-  // // License Section
-  // markdownGenerator += `
-  // * [License](#license)`;
+  *Contribution guideline for the app. [Contributor Covenant](https://www.contributor-covenant.org/) industry standard.*
   
+  ${userResponses.contributing}
 
-  // // Installation Section
-  // if (userResponses.installation !== '') {
+  ## Tests
   
-  // markdownGenerator +=
-  // `
-  // ## Installation
+  *To run the tests, run the following command:*
   
-  // *Steps required to install the project and step-by-step guide of how to get the development environment running:*
-  
-  // ${userResponses.installation}`
-  // };
-  
+  ${userResponses.tests}
 
-  // // Usage Section
-  // if (userResponses.usage !== '') {
+  ## License
   
-  // markdownGenerator +=
-  
-  // `
-  // ## Usage 
-  
-  // *Instructions and examples for use:*
-  
-  // ${userResponses.usage}`
-  // };
-  
-  
-  // // Contributing Section
-  // if (userResponses.contributing !== '') {
+  ${userResponses.license}
 
-  // `
-  // ## Contributing
+  ## Support
+  
+  If you have any questions, or open issues about the repo, I can be reached at:
+  Email: ${userResponses.email}
+  GitHub: [@${userResponses.github}](https://github.com/${userResponses.github}/).
+
+  
+  
+  
+    `
+  
+    // // License Section
+    // markdownGenerator += `
+    // * [License](#license)`;
+    
+  
+    // // License Section
+    // markdownGenerator +=
+    // `
+    
+    // ## License
+    
+    // ${userResponses.license}
+    // `;
+
  
-  // *Contribution guideline for the app. [Contributor Covenant](https://www.contributor-covenant.org/) industry standard.*
-  
-  // ${userResponses.contributing}`
-  // };
-  
-
-  // // Testing Section
-  // if (userResponses.testing !== '') {
-  
-  // markdownGenerator +=
-  // `
-  
-  // ## Tests
-  
-  // *To run the tests, run the following command:*
-  
-  // ${userResponses.tests}`
-  // };
-
-
-  // // License Section
-  // markdownGenerator +=
-  // `
-  
-  // ## License
-  
-  // ${userResponses.license}
-  // `;
-
-
-  // // Developer section
-  // let devInfo = 
-  // `
-  // ---
-  
-  // ## Support
-  
-  // If you have any questions, or open issues about the repo, I can be reached at:
- 
-  // GitHub: [@${userInfo.login}](${userInfo.url})
-  // `;
-
-  // if (userInfo.email !== null) {
-  
-  // devInfo +=
-  // `
-  // Email: ${userInfo.email}
-  // `};
-
-  // // Add developer
-  // markdownGenerator += devInfo;
-  
-
-  
 }
 
 module.exports = generateMarkdown;
