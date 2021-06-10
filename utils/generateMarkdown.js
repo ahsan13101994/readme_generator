@@ -11,146 +11,138 @@ function renderLicenseLink(license) {}
 function renderLicenseSection(license) {}
 
 // TODO: Create a function to generate markdown for README
-function generateMarkdown(userResponses, userInfo) {
+function generateMarkdown(userResponses) {
 
-  // Table of Contents Section
-  let generateTableofContent = `## Table of Contents`;
+  return draftMarkdown=`
+  Table of Contents Section
 
-  if (userResponses.installation !== '') { generateTableofContent += `
-  * [Installation](#installation)` };
+  ## Table of Contents
+  ${userResponses.installation?'* [Installation](#installation)':''}
+  ${userResponses.usage?'* [Usage](#usage)':''}
+  ${userResponses.contributing?'* [Contributing](#contributing)':''}
+  ${userResponses.testing?'* [Tests](#testing)':''}
 
-  if (userResponses.usage !== '') { generateTableofContent += `
-  * [Usage](#usage)` };
-
-  if (userResponses.contributing !== '') { generateTableofContent += `
-  * [Contributing](#contributing)` };
-
-  if (userResponses.tests !== '') { generateTableofContent += `
-  * [Tests](#testing)` };
-
-
-  // Title
-  let markdownGenerator = 
-  `# ${userResponses.title}
-  
-  ## Description 
-  
-  ${userResponses.description}
   `
+  // // Table of Contents Section
+  // let generateTableofContent = `## Table of Contents`;
 
-  // Add Table of Contents to markdown
-  markdownGenerator += generateTableofContent;
+  // if (userResponses.installation !== '') { generateTableofContent += `
+  // * [Installation](#installation)` };
+
+  // if (userResponses.usage !== '') { generateTableofContent += `
+  // * [Usage](#usage)` };
+
+  // if (userResponses.contributing !== '') { generateTableofContent += `
+  // * [Contributing](#contributing)` };
+
+  // if (userResponses.tests !== '') { generateTableofContent += `
+  // * [Tests](#testing)` };
+
+
+  // // Title
+  // let markdownGenerator = 
+  // `# ${userResponses.title}
+  
+  // ## Description 
+  
+  // ${userResponses.description}
+  // `
+
+  // // Add Table of Contents to markdown
+  // markdownGenerator += generateTableofContent;
  
-  // Add License section since License is required to Table of Contents
-  markdownGenerator += `
-  * [License](#license)`;
+  // // Add License section since License is required to Table of Contents
+  // markdownGenerator += `
+  // * [License](#license)`;
   
 
-  // Installation Section
-  if (userResponses.installation !== '') {
+  // // Installation Section
+  // if (userResponses.installation !== '') {
   
-  markdownGenerator +=
-  `
-  ## Installation
+  // markdownGenerator +=
+  // `
+  // ## Installation
   
-  *Steps required to install the project and step-by-step guide of how to get the development environment running:*
+  // *Steps required to install the project and step-by-step guide of how to get the development environment running:*
   
-  ${userResponses.installation}`
-  };
+  // ${userResponses.installation}`
+  // };
   
 
-  // Usage Section
-  if (userResponses.usage !== '') {
+  // // Usage Section
+  // if (userResponses.usage !== '') {
   
-  markdownGenerator +=
+  // markdownGenerator +=
   
-  `
-  ## Usage 
+  // `
+  // ## Usage 
   
-  *Instructions and examples for use:*
+  // *Instructions and examples for use:*
   
-  ${userResponses.usage}`
-  };
+  // ${userResponses.usage}`
+  // };
   
   
-  // Contributing Section
-  if (userResponses.contributing !== '') {
+  // // Contributing Section
+  // if (userResponses.contributing !== '') {
 
-  `
-  ## Contributing
+  // `
+  // ## Contributing
  
-  *Contribution guideline for the app. [Contributor Covenant](https://www.contributor-covenant.org/) industry standard.*
+  // *Contribution guideline for the app. [Contributor Covenant](https://www.contributor-covenant.org/) industry standard.*
   
-  ${userResponses.contributing}`
-  };
+  // ${userResponses.contributing}`
+  // };
   
 
-  // Testing Section
-  if (userResponses.testing !== '') {
+  // // Testing Section
+  // if (userResponses.testing !== '') {
   
-  markdownGenerator +=
-  `
+  // markdownGenerator +=
+  // `
   
-  ## Tests
+  // ## Tests
   
-  *To run the tests, run the following command:*
+  // *To run the tests, run the following command:*
   
-  ${userResponses.tests}`
-  };
+  // ${userResponses.tests}`
+  // };
 
 
-  // License Section
-  markdownGenerator +=
-  `
+  // // License Section
+  // markdownGenerator +=
+  // `
   
-  ## License
+  // ## License
   
-  ${userResponses.license}
-  `;
+  // ${userResponses.license}
+  // `;
 
 
-  // Developer section
-  let devInfo = 
-  `
-  ---
+  // // Developer section
+  // let devInfo = 
+  // `
+  // ---
   
-  ## Support
+  // ## Support
   
-  If you have any questions, or open issues about the repo, I can be reached at:
+  // If you have any questions, or open issues about the repo, I can be reached at:
  
-  GitHub: [@${userInfo.login}](${userInfo.url})
-  `;
+  // GitHub: [@${userInfo.login}](${userInfo.url})
+  // `;
 
-  if (userInfo.email !== null) {
+  // if (userInfo.email !== null) {
   
-  devInfo +=
-  `
-  Email: ${userInfo.email}
-  `};
+  // devInfo +=
+  // `
+  // Email: ${userInfo.email}
+  // `};
 
-  // Add developer
-  markdownGenerator += devInfo;
+  // // Add developer
+  // markdownGenerator += devInfo;
   
-  return draftMarkdown;
+
   
 }
 
 module.exports = generateMarkdown;
-
-//User API
-
-const axios = require('axios');
-
-const api = {
-  async getUser(userResponses) {
-    try { let response = await axios
-        .get(`https://api.github.com/users/${userResponses.username}`);
-        return response.data;
-
-      } catch (error) {
-        console.log(error);
-      }
-  }
-};
-
-module.exports = api;
