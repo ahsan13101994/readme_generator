@@ -1,23 +1,74 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
-inquirer
-  .prompt([
-    /* Pass your questions in here */
-  ])
-  .then((answers) => {
-    // Use user feedback for... whatever!!
-  })
-  .catch((error) => {
-    if (error.isTtyError) {
-      // Prompt couldn't be rendered in the current environment
-    } else {
-      // Something else went wrong
-    }
-  });
 const generateMarkdown = require('./utils/generateMarkdown.js');
+const util = require('util');
 
 // TODO: Create an array of questions for user input
-const questions = [];
+const questions = [
+    {
+        type: 'input',
+        message: "What is your GitHub username?",
+        name: 'username',
+        default: 'dev',
+        validate: function (answer) {
+            if (answer.length < 1) {
+                return console.log("Valid GitHub username is required.");
+            }
+            return true;
+        }
+    },
+    {
+        type: 'input',
+        message: "What is your project's name?",
+        name: 'title',
+        default: 'readme-generator',
+        validate: function (answer) {
+            if (answer.length < 1) {
+                return console.log("Valid Project Title is required.");
+            }
+            return true;
+        }
+    },
+    {
+        type: 'input',
+        message: "Write a short description of your project.",
+        name: 'description',
+        default: 'Project Description',
+        validate: function (answer) {
+            if (answer.length < 1) {
+                return console.log("Valid project description is required.");
+            }
+            return true;
+        }
+    },
+    {
+        type: 'list',
+        message: "What type of license should your project have? (Use Arrow Keys)",
+        choices: ['GNU AGPLv3', 'GNU GPLv3', 'GNU LGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0', 'MIT License', 'Boost Software License 1.0', 'The Unlicense'],
+        name: 'license'
+    }
+    {
+        type: 'input',
+        message: "What command should be run to install the dependencies?",
+        name: 'installation'
+    },
+    {
+        type: 'input',
+        message: "What command should be run to run tests?",
+        name: 'testing'
+    },
+    {
+        type: 'input',
+        message: "What does the user need to know about using the repo?",
+        name: 'usage'
+    },
+    {
+        type: 'input',
+        message: "What does the user need to know about contributing to the repo?",
+        name: 'contributing'
+    },
+   
+];
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
