@@ -12,6 +12,22 @@ function renderLicenseSection(license) {}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
+
+  // Table of Contents Section
+  let generateTableofContent = `## Table of Contents`;
+
+  if (userResponses.installation !== '') { generateTableofContent += `
+  * [Installation](#installation)` };
+
+  if (userResponses.usage !== '') { generateTableofContent += `
+  * [Usage](#usage)` };
+
+  if (userResponses.contributing !== '') { generateTableofContent += `
+  * [Contributing](#contributing)` };
+
+  if (userResponses.tests !== '') { generateTableofContent += `
+  * [Tests](#testing)` };
+
   return `# ${data.title}
 
 `;
