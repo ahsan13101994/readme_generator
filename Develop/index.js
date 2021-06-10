@@ -58,7 +58,7 @@ const questions = [
         message: "What type of license should your project have? (Use Arrow Keys)",
         choices: ['GNU AGPLv3', 'GNU GPLv3', 'GNU LGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0', 'MIT License', 'Boost Software License 1.0', 'The Unlicense'],
         name: 'license'
-    }
+    },
     {
         type: 'input',
         message: "What command should be run to install the dependencies?",
@@ -83,7 +83,15 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    writeFile(fileName, data, err => {
+        if (err) {
+          return console.log(err);
+        }
+      
+        console.log("Generating Readme")
+    });
+}
 
 // TODO: Create a function to initialize app
 function init() {}
