@@ -9,7 +9,7 @@ const questions = [
     {
         type: 'input',
         message: "What is your GitHub username?",
-        name: 'username',
+        name: 'github',
         default: 'dev',
         validate: function (answer) {
             if (answer.length < 1) {
@@ -68,7 +68,7 @@ const questions = [
     {
         type: 'input',
         message: "What command should be run to run tests?",
-        name: 'testing'
+        name: 'tests'
     },
     {
         type: 'input',

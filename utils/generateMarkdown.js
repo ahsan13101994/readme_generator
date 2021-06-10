@@ -16,18 +16,20 @@ function generateMarkdown(userResponses) {
   return draftMarkdown=`
 
   ${userResponses.title}
+  ${renderLicenseBadge(userResponses.license)}
+
+  ## Description 
+  
+  ${userResponses.description}
 
   Table of Contents Section
 
   ## Table of Contents
   ${userResponses.installation?'* [Installation](#installation)':''}
-  ${userResponses.usage?'* [Usage](#usage)':''}
+  ${userResponses.usage?'* [Usage](#usage)':''}${renderLicenseLink(userResponses.license)}
   ${userResponses.contributing?'* [Contributing](#contributing)':''}
   ${userResponses.testing?'* [Tests](#testing)':''}
-  
-  ## Description 
-  
-  ${userResponses.description}
+
 
   ## Installation
   
@@ -40,6 +42,7 @@ function generateMarkdown(userResponses) {
   *Instructions and examples for use:*
   
   ${userResponses.usage}
+  ${renderLicenseSection(userResponses.license)}
 
   ## Contributing
  
@@ -62,26 +65,9 @@ function generateMarkdown(userResponses) {
   If you have any questions, or open issues about the repo, I can be reached at:
   Email: ${userResponses.email}
   GitHub: [@${userResponses.github}](https://github.com/${userResponses.github}/).
-
   
+`
   
-  
-    `
-  
-    // // License Section
-    // markdownGenerator += `
-    // * [License](#license)`;
-    
-  
-    // // License Section
-    // markdownGenerator +=
-    // `
-    
-    // ## License
-    
-    // ${userResponses.license}
-    // `;
-
  
 }
 
