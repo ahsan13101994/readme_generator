@@ -11,7 +11,7 @@ function renderLicenseLink(license) {}
 function renderLicenseSection(license) {}
 
 // TODO: Create a function to generate markdown for README
-function generateMarkdown(data) {
+function generateMarkdown(userResponses, userInfo) {
 
   // Table of Contents Section
   let generateTableofContent = `## Table of Contents`;
@@ -76,7 +76,6 @@ function generateMarkdown(data) {
   // Contributing Section
   if (userResponses.contributing !== '') {
 
-    markdownGenerator +=
   `
   ## Contributing
  

@@ -94,8 +94,31 @@ function writeToFile(fileName, data) {
     });
 }
 
-// TODO: Create a function to initialize app
-function init() {}
+const writeFileAsync = util.promisify(writeToFile);
 
+// TODO: Create a function to initialize app
+async function init() {
+    try {
+
+        // Prompt Inquirer questions
+        const userResponses = await inquirer.prompt(questions);
+        console.log("Thank you for your responses! Fetching your GitHub data next...");
+    
+        // Call GitHub api for user info
+        const userInfo = await api.getUser(userResponses);
+        console.log("Your GitHub user info: ", userInfo);
+    
+        // Pass Inquirer userResponses and GitHub userInfo to generateMarkdown
+        console.log("Generating your README next...")
+        const markdown = generateMarkdown(userResponses, userInfo);
+        console.log(markdown);
+    
+        // Write markdown to file
+        await writeFileAsync('README.md', markdown);
+
+    } catch (error) {
+        console.log(error);
+    }
+};
 // Function call to initialize app
 init();
