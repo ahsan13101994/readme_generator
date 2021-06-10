@@ -28,25 +28,20 @@ function generateMarkdown(userResponses) {
   ## Description 
   
   ${userResponses.description}
+
+  ## Installation
+  
+  *Steps required to install the project and step-by-step guide of how to get the development environment running:*
+  
+  ${userResponses.installation}
+  
+  
   `
-// // Table of Contents Section
-  // let generateTableofContent = `## Table of Contents`;
 
-  // if (userResponses.installation !== '') { generateTableofContent += `
-  // * [Installation](#installation)` };
-
-  // if (userResponses.usage !== '') { generateTableofContent += `
-  // * [Usage](#usage)` };
-
-  // if (userResponses.contributing !== '') { generateTableofContent += `
-  // * [Contributing](#contributing)` };
-
-  // if (userResponses.tests !== '') { generateTableofContent += `
-  // * [Tests](#testing)` };
   // // Add Table of Contents to markdown
   // markdownGenerator += generateTableofContent;
  
-  // // Add License section since License is required to Table of Contents
+  // // License Section
   // markdownGenerator += `
   // * [License](#license)`;
   
