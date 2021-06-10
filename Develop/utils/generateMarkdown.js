@@ -28,9 +28,112 @@ function generateMarkdown(data) {
   if (userResponses.tests !== '') { generateTableofContent += `
   * [Tests](#testing)` };
 
-  return `# ${data.title}
 
-`;
+  // Title
+  let markdownGenerator = 
+  `# ${userResponses.title}
+  
+  ## Description 
+  
+  ${userResponses.description}
+  `
+
+  // Add Table of Contents to markdown
+  markdownGenerator += generateTableofContent;
+ 
+  // Add License section since License is required to Table of Contents
+  markdownGenerator += `
+  * [License](#license)`;
+  
+
+  // Installation Section
+  if (userResponses.installation !== '') {
+  
+  markdownGenerator +=
+  `
+  ## Installation
+  
+  *Steps required to install the project and step-by-step guide of how to get the development environment running:*
+  
+  ${userResponses.installation}`
+  };
+  
+
+  // Usage Section
+  if (userResponses.usage !== '') {
+  
+  markdownGenerator +=
+  
+  `
+  ## Usage 
+  
+  *Instructions and examples for use:*
+  
+  ${userResponses.usage}`
+  };
+  
+  
+  // Contributing Section
+  if (userResponses.contributing !== '') {
+
+    markdownGenerator +=
+  `
+  ## Contributing
+ 
+  *Contribution guideline for the app. [Contributor Covenant](https://www.contributor-covenant.org/) industry standard.*
+  
+  ${userResponses.contributing}`
+  };
+  
+
+  // Testing Section
+  if (userResponses.testing !== '') {
+  
+  markdownGenerator +=
+  `
+  
+  ## Tests
+  
+  *To run the tests, run the following command:*
+  
+  ${userResponses.tests}`
+  };
+
+
+  // License Section
+  markdownGenerator +=
+  `
+  
+  ## License
+  
+  ${userResponses.license}
+  `;
+
+
+  // Developer section
+  let devInfo = 
+  `
+  ---
+  
+  ## Support
+  
+  If you have any questions, or open issues about the repo, I can be reached at:
+ 
+  GitHub: [@${userInfo.login}](${userInfo.url})
+  `;
+
+  if (userInfo.email !== null) {
+  
+  devInfo +=
+  `
+  Email: ${userInfo.email}
+  `};
+
+  // Add developer
+  markdownGenerator += devInfo;
+  
+  return draftMarkdown;
+  
 }
 
 module.exports = generateMarkdown;
