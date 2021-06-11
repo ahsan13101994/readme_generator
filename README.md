@@ -1,13 +1,10 @@
 
 
-  Readme Generator
-
-  <a href="https://img.shields.io/badge/License-M-brightgreen"><img src="https://img.shields.io/badge/License-M-brightgreen"></a>
-
+  Readme File Generator
 
   ## Description 
   
-  This project automatically generates readme.md buy using user response.
+  This code generates Readme.MD file with the user response. A high-quality README file explains what your application does and why you used the technologies that you did. At a bare minimum, a README needs a title and a short description explaining the what, why, and how of the project.
 
   Table of Contents Section
 
@@ -22,19 +19,21 @@
   
   *Steps required to install the project and step-by-step guide of how to get the development environment running:*
   
-  npm install 
+  npm install inquirer
 
   ## Usage 
   
-  *Instructions and examples for use:*
+  *Instructions and examples for use:
+   
+  [Demo Link](https://drive.google.com/file/d/1lt_5fTS1c40iQVHQvRut7Gcmee0FBQef/view)*
   
-  no
+  [alt text](readme_demo.gif) Humanitarian granular, resilient, natural resources inclusive radical framework. Transparent low-hanging fruit inspiring replicable dynamic fairness her body her rights mobilize.
 
   ## Contributing
  
   *Contribution guideline for the app. [Contributor Covenant](https://www.contributor-covenant.org/) industry standard.*
   
-  no
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sem metus, ornare nec rutrum ac, aliquet vitae quam. Quisque at posuere libero. Proin accumsan dolor ante, mollis semper massa congue a. Praesent sed est eu neque pharetra iaculis. Cras id molestie diam, non luctus quam. Suspendisse vulputate eu turpis a auctor. Quisque suscipit ipsum vitae tempor viverra.
 
   ## Tests
   
@@ -49,6 +48,6 @@
   ## Support
   
   If you have any questions, or open issues about the repo, I can be reached at:
-  Email: syedahsan@github.com
-  GitHub: [@ahsan](https://github.com/ahsan/).
+  Email: ahsan.ali0307@gmail.com
+  GitHub: [@ahsan13101994](https://github.com/ahsan13101994/).
   

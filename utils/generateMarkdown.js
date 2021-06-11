@@ -26,7 +26,9 @@ function generateMarkdown(userResponses) {
 
   ## Usage 
   
-  *Instructions and examples for use:*
+  *Instructions and examples for use:
+   
+  [Demo Link](https://drive.google.com/file/d/1lt_5fTS1c40iQVHQvRut7Gcmee0FBQef/view)*
   
   ${userResponses.usage}
 
