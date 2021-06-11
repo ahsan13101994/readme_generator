@@ -27,7 +27,9 @@
    
   [Demo Link](https://drive.google.com/file/d/1lt_5fTS1c40iQVHQvRut7Gcmee0FBQef/view)*
   
-  [alt text](readme_demo.gif) Humanitarian granular, resilient, natural resources inclusive radical framework. Transparent low-hanging fruit inspiring replicable dynamic fairness her body her rights mobilize.
+  [Readme Demo](readme_demo.gif) 
+  
+  Humanitarian granular, resilient, natural resources inclusive radical framework. Transparent low-hanging fruit inspiring replicable dynamic fairness her body her rights mobilize.
 
   ## Contributing
  
