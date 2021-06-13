@@ -1,6 +1,8 @@
 
 
   Readme File Generator
+  https://img.shields.io/badge/license-[GNU LGPLv3](https://choosealicense.com/licenses/lgpl-3.0/)
+  ![License Badge](https://img.shields.io/badge/license-GNU LGPLv3-9cf)-9cf
 
   ## Description 
   
@@ -11,6 +13,7 @@
   ## Table of Contents
   * [Installation](#installation)
   * [Usage](#usage)
+  https://choosealicense.com/licenses/lgpl-3.0/
   * [Contributing](#contributing)
   * [Tests](#tests)
 
@@ -27,9 +30,10 @@
    
   [Demo Link](https://drive.google.com/file/d/1lt_5fTS1c40iQVHQvRut7Gcmee0FBQef/view)*
   
-  [Readme Demo](readme_demo.gif) 
-  
-  Humanitarian granular, resilient, natural resources inclusive radical framework. Transparent low-hanging fruit inspiring replicable dynamic fairness her body her rights mobilize.
+  [Readme Demo](readme_demo.gif) Humanitarian granular, resilient, natural resources inclusive radical framework. Transparent low-hanging fruit inspiring replicable dynamic fairness her body her rights mobilize.
+
+  [GNU LGPLv3](https://choosealicense.com/licenses/lgpl-3.0/)
+  ![License Badge](https://img.shields.io/badge/license-GNU LGPLv3-9cf)
 
   ## Contributing
  
@@ -45,11 +49,11 @@
 
   ## License
   
-  MIT License
+  GNU LGPLv3
 
   ## Support
   
   If you have any questions, or open issues about the repo, I can be reached at:
-  Email: ahsan.ali0307@gmail.com
+  Email: ahsan.ali0307@gmail.com 
   GitHub: [@ahsan13101994](https://github.com/ahsan13101994/).
   
