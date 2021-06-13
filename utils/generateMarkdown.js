@@ -64,7 +64,8 @@ function generateMarkdown(userResponses) {
   let license = renderLicenseSection(userResponses.license)
   return draftMarkdown=`
 
-  ${userResponses.title}
+  ##${userResponses.title}
+  
   ${renderLicenseBadge(license)}
 
   ## Description 
